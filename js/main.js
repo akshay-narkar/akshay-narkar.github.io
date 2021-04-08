@@ -76,7 +76,8 @@ window.history.replaceState({}, document.title, clean_uri);
 
 var form = document.querySelector("#contact-form");
 var $form = $('form#contact-form'),
-    url = 'https://script.google.com/macros/library/d/1-8WTPDxx9Z4YMyKM3GhOpVYvbU5PM69RggWKzySdCLWVJ0V2GY8501za/1'
+    url = '     https://script.google.com/macros/s/AKfycbx0Hz8sxaRSzAM0gaRdBOuUWS6Lc145bzdsgztOw6buY6LohzyZKUYbQQtZ13pDdAgBSg/exec'
+
 
 form.addEventListener('submit', function(e){
   if(!form.checkValidity()){
@@ -100,7 +101,7 @@ form.addEventListener('submit', function(e){
       }
       
     })
-    alert("Thanks for reaching out! I'll get back to you at the ASAP.")
+    alert("Thanks for reaching out! I'll get back to you ASAP.")
   }
   
 }, false )
