@@ -76,7 +76,7 @@ window.history.replaceState({}, document.title, clean_uri);
 
 var form = document.querySelector("#contact-form");
 var $form = $('form#contact-form'),
-    url = 'https://script.google.com/macros/s/AKfycbwsfkXw1-nReSdl64ae76Ni129U_VWqdEXRfXcAzOnzoltB_HDLyynHlAg3Bzn4k0JjUg/exec'
+    url = 'https://script.google.com/macros/library/d/1-8WTPDxx9Z4YMyKM3GhOpVYvbU5PM69RggWKzySdCLWVJ0V2GY8501za/1'
 
 form.addEventListener('submit', function(e){
   if(!form.checkValidity()){
