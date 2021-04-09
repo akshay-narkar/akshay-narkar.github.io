@@ -11,14 +11,14 @@ menuBtn.addEventListener('click', () => {
 // toggle on item click if open 
 
 menuItem.forEach(item => {
-  item.addEventListener('click', ()=>{
-    if(menuBtn.classList.contains('open')){
+  item.addEventListener('click', () => {
+    if (menuBtn.classList.contains('open')) {
       toggle();
     }
   });
 });
 
-function toggle(){
+function toggle() {
   menuBtn.classList.toggle('open');
   menuItems.classList.toggle('open');
 }
@@ -39,8 +39,8 @@ function toggle(){
           event.preventDefault()
           event.stopPropagation()
         }
-        
-        
+
+
 
         form.classList.add('was-validated')
       }, false)
@@ -51,20 +51,19 @@ function toggle(){
 
 //Script for form to sheets
 
-$.fn.serializeObject = function()
-{
+$.fn.serializeObject = function () {
   var o = {};
   var a = this.serializeArray();
-  $.each(a, function() {
-      if (o[this.name]) {
-          if (!o[this.name].push) {
-              o[this.name] = [o[this.name]];
-          }
-
-          o[this.name].push(this.value || '');
-      } else {
-          o[this.name] = this.value || '';
+  $.each(a, function () {
+    if (o[this.name]) {
+      if (!o[this.name].push) {
+        o[this.name] = [o[this.name]];
       }
+
+      o[this.name].push(this.value || '');
+    } else {
+      o[this.name] = this.value || '';
+    }
   });
   return o;
 };
@@ -76,35 +75,34 @@ window.history.replaceState({}, document.title, clean_uri);
 
 var form = document.querySelector("#contact-form");
 var $form = $('form#contact-form'),
-    url = 'https://script.google.com/macros/s/AKfycbzI8ZqKPixKqiW4Mzz2j_bik0q6s89Q7NgAtcCicnyq-ArTL3BqtoFgjw_r9EBZl2JBhw/exec'
+  url = 'https://script.google.com/macros/s/AKfycbzI8ZqKPixKqiW4Mzz2j_bik0q6s89Q7NgAtcCicnyq-ArTL3BqtoFgjw_r9EBZl2JBhw/exec'
 
 
-form.addEventListener('submit', function(e){
-  if(!form.checkValidity()){
+form.addEventListener('submit', function (e) {
+  if (!form.checkValidity()) {
     e.preventDefault();
     e.stopPropagation();
   }
-  else{
+  else {
     var jqxhr = $.ajax({
       url: url,
       method: "GET",
       dataType: "json",
       data: $form.serializeObject(),
-      success: function(data, textStatus, jqXHR){
-                console.log(jqXHR.status);
-                window.location.href= "/index.html";
+      success: function (data, textStatus, jqXHR) {
+        console.log(jqXHR.status);
+        window.location.href = "/index.html";
       },
-      complete: function (xhr, status)
-      {
-          if(status == 'success')
-              location.href = 'index.html';
+      complete: function (xhr, status) {
+        if (status == 'success')
+          location.href = 'index.html';
       }
-      
+
     })
     alert("Thanks for reaching out! I'll get back to you ASAP.")
   }
-  
-}, false )
+
+}, false)
 
 
 
@@ -114,20 +112,27 @@ form.addEventListener('submit', function(e){
 const collapseItem = document.querySelectorAll(".Collapsed");
 
 collapseItem.forEach(item => {
-  if(item.parentElement.parentElement.parentElement.parentElement.children[1].classList.contains("show")){
+  if (item.parentElement.parentElement.parentElement.parentElement.children[1].classList.contains("show")) {
     item.parentElement.parentElement.children[1].children[0].classList.add("bi-chevron-down");
   }
   item.addEventListener('click', () => {
- 
-     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
-     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
-     
-  
-      
 
-  
-    
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
   })
-  
+
+  item.addEventListener('click', () => {
+
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
+  })
+  // /html/body / section[3] / div / div / div[2] / div / div[1] / div[1] / div / div[1] / button
+
+
+  //   / html / body / section[3] / div / div / div[2] / div / div[1] / div[1] / div / div[1] / button
+
+
+
+
 });
- 
+
