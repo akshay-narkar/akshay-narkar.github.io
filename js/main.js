@@ -107,8 +107,8 @@ form.addEventListener('submit', function (e) {
 
 
 
-Arrows
-const langCollapse = document.getElementById("")
+// Arrows
+// const langCollapse = document.getElementById("")
 const collapseItem = document.querySelectorAll(".Collapsed");
 
 collapseItem.forEach(item => {
