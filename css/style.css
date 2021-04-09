@@ -209,6 +209,7 @@ body {
 @media (max-width: 300px) {
   .hero-section {
     height: 220vh;
+    padding-left: 10px;
   }
 
   .header {
@@ -219,6 +220,7 @@ body {
 @media (min-width: 301px) and  (max-width: 360px) {
   .hero-section {
     height: 115vh;
+    padding-left: 10px;
   }
 
   .header {

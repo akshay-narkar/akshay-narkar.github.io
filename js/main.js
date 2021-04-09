@@ -107,8 +107,8 @@ form.addEventListener('submit', function (e) {
 
 
 
-// Arrows
-// const langCollapse = document.getElementById("")
+Arrows
+const langCollapse = document.getElementById("")
 const collapseItem = document.querySelectorAll(".Collapsed");
 
 collapseItem.forEach(item => {
@@ -120,12 +120,22 @@ collapseItem.forEach(item => {
     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
   })
+});
 
-  item.addEventListener('click', () => {
+// const item2 = document.querySelectorAll(".Collapseds");
 
-    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
-    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
-  })
+
+// item2.forEach(item1 => {
+//   if (item1.parentElement.parentElement.parentElement.parentElement.children[1].classList.contains("show")) {
+//     item1.parentElement.parentElement.children[1].children[0].classList.add("bi-chevron-down");
+//   }
+//   item1.addEventListener('click', () => {
+
+//     item1.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
+//     item1.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
+//   })
+
+// });
   // /html/body / section[3] / div / div / div[2] / div / div[1] / div[1] / div / div[1] / button
 
 
@@ -134,5 +144,4 @@ collapseItem.forEach(item => {
 
 
 
-});
 
