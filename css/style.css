@@ -206,6 +206,26 @@ body {
 
 /* MEDIA QUERIES */
 
+@media (max-width: 300px) {
+  .hero-section {
+    height: 220vh;
+  }
+
+  .header {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 360px) {
+  .hero-section {
+    height: 115vh;
+  }
+
+  .header {
+    padding: 1rem 1rem;
+  }
+}
+
 @media (max-width: 1249px) {
   .home-image {
     display: none;
