@@ -111,23 +111,22 @@ form.addEventListener('submit', function(e){
 
 // Arrows
 // const langCollapse = document.getElementById("")
-const collapseItem = document.querySelectorAll(".Collapsed");
+const collapseItem = document.querySelectorAll(".dummy");
 
 collapseItem.forEach(item => {
-  if(item.parentElement.parentElement.parentElement.parentElement.children[1].classList.contains("show")){
-    item.parentElement.parentElement.children[1].children[0].classList.add("bi-chevron-down");
+ if (item.children[1].classList.contains('show')) {
+    item.children[0].children[0].children[1].children[0].classList.add("bi-chevron-down");
+  }
+  if (!item.children[1].classList.contains('show')) {
+    item.children[0].children[0].children[1].children[0].classList.add("bi-chevron-right");
   }
   item.addEventListener('click', () => {
  
-     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
-     item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
+    //  item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
+    //  item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
     
-  })
-
-  item.addEventListener('click', () => {
-
-    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
-    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
+    item.children[0].children[0].children[1].children[0].classList.toggle("bi-chevron-down");
+    item.children[0].children[0].children[1].children[0].classList.toggle("bi-chevron-right");
   })
   
 });
