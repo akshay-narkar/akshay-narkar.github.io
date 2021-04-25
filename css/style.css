@@ -12,6 +12,16 @@ body {
   background: #e5e5e5;
 }
 
+.card-no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-no-underline:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* header  */
 .header {
   background: #fff;
