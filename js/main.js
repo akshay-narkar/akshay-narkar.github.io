@@ -121,13 +121,15 @@ collapseItem.forEach(item => {
  
      item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
      item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
-     
-  
-      
-
-  
     
+  })
+
+  item.addEventListener('click', () => {
+
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-down");
+    item.parentElement.parentElement.children[1].children[0].classList.toggle("bi-chevron-right");
   })
   
 });
  
+
